@@ -20,6 +20,11 @@ app.use(cors());
 
 const plantController = require('./controllers/plantController');
 app.use('/plants', plantController);
+
+const homeController = require('./controllers/homeController');
+app.use('/', homeController);
+
+
 // NEED SOMETHING THAT ROUTES TO JUST '/' FOR HEROKU
 
 
