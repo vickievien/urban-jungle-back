@@ -27,7 +27,8 @@ app.use('/', homeController);
 
 // NEED SOMETHING THAT ROUTES TO JUST '/' FOR HEROKU
 
-
-app.listen(3001, ()=> {
-    console.log('Port 3001 running');
+const port = process.env.PORT || 3001
+app.listen(port, () => {
+    console.log('app running')
 })
+
