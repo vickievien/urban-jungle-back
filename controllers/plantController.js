@@ -38,7 +38,6 @@ router.post('/', async (req,res) => {
 router.get('/:id', async (req,res) => {
     try {
         const plant = await Plant.findById(req.params.id);
-        console.log('hello');
         if(!plant) {
             throw new Error("Oops. Looks like there's no plant by this ID.")
         }
@@ -71,7 +70,7 @@ router.put('/:id', async (req,res) => {
 })
 
 // PLANTS DELETE
-router.get('/:id', async (req,res) => {
+router.delete('/:id', async (req,res) => {
     try {
         const plant = await Plant.findByIdAndDelete(req.params.id);
         res.send({
