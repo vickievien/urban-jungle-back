@@ -8,7 +8,7 @@ const plantSchema = new Schema ({
     img: {type: String, required: true},
     description: String,
     email: {type: String, required: true}
-}, timestamp)
+}, {timestamps: true})
 
 const Plant = mongoose.model('Plant', plantSchema);
 
