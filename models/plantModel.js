@@ -7,7 +7,10 @@ const plantSchema = new Schema ({
     price: {type: Number, required: true},
     img: {type: String, required: true},
     description: String,
-    email: {type: String, required: true}
+    email: {type: String, required: true},
+    maintenance: String,
+    lightType: String,
+    lightLevel: String,
 }, {timestamps: true})
 
 const Plant = mongoose.model('Plant', plantSchema);
