@@ -11,6 +11,7 @@ const plantSchema = new Schema ({
     maintenance: String,
     lightType: String,
     lightLevel: String,
+    location: String
 }, {timestamps: true})
 
 const Plant = mongoose.model('Plant', plantSchema);
